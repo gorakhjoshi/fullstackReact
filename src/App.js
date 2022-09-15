@@ -4,14 +4,26 @@ import illustration_woman_mobile from "./images/illustration-woman-online-mobile
 
 const App = () => {
   return (
-    <main>
-      <article>
-        <div>
-          <img src={illustration_box} alt="illustration with box" />
-          <img src={illustration_woman_desktop} alt="illustration with women" />
-          <img src={illustration_woman_mobile} alt="illustration with women" />
+    <main className="container">
+      <article className="component">
+        <div className="illustration">
+          <img
+            src={illustration_box}
+            alt="illustration with box"
+            className="illustration__box"
+          />
+          <img
+            src={illustration_woman_desktop}
+            alt="illustration with women"
+            className="illustration__women_desktop"
+          />
+          <img
+            src={illustration_woman_mobile}
+            alt="illustration with women"
+            className="illustration__women_mobile"
+          />
         </div>
-        <div>
+        <div className="faq">
           <h1>FAQ</h1>
           <dl>
             <div>
