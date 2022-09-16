@@ -1,12 +1,13 @@
-function AccordionItem({ qa }) {
-  const { question, answer } = qa;
+function AccordionItem({ item, onClick }) {
   return (
-    <div className="faq__question">
+    <div className="faq__question" onClick={onClick}>
       <dt>
-        <button className="faq__question-button">{question}</button>
+        <button className="faq__question-button" aria-expanded="true">
+          {item.question}
+        </button>
       </dt>
       <dd>
-        <p className="faq__descOld">{answer}</p>
+        <p className="faq__desc showDescription">{item.answer}</p>
       </dd>
     </div>
   );
