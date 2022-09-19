@@ -168,8 +168,12 @@ button:focus-visible {
 }
 
 .faq__desc.show-description {
-  height: 2rem;
+  height: 5rem;
   margin-bottom: 15px;
+  background-color: red;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
 }
 
 /* Arrows */
