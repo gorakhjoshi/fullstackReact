@@ -1,4 +1,11 @@
-function AccordionItem({ item, onClick }) {
+function AccordionItem({
+  item,
+  onClick,
+  showDescription,
+  ariaExpanded,
+  fontBold,
+  index,
+}) {
   return (
     <div className="faq__question" onClick={onClick}>
       <dt>
@@ -7,7 +14,7 @@ function AccordionItem({ item, onClick }) {
         </button>
       </dt>
       <dd>
-        <p className="faq__desc showDescription">{item.answer}</p>
+        <p className="faq__descOld showDescription">{item.answer}</p>
       </dd>
     </div>
   );

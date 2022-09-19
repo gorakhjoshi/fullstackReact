@@ -9,12 +9,19 @@ function Accordion({ questionAnswers }) {
       <h1 className="faq__title">FAQ</h1>
       <dl>
         {questionAnswers.map((item, index) => {
+          const showDescription =
+            index === activeItem ? "show-description" : "";
+          const ariaExpanded = index === activeItem ? true : false;
+          const fontBold = index === activeItem ? true : false;
           return (
             <AccordionItem
               item={item}
               key={index}
-              // onClick={() => setActiveItem(index)}
+              onClick={() => setActiveItem(index)}
               index={index}
+              showDescription={showDescription}
+              ariaExpanded={ariaExpanded}
+              fontBold={fontBold}
             />
           );
         })}

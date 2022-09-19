@@ -44,7 +44,7 @@ const App = () => {
           <img
             src={illustration_woman_desktop}
             alt="illustration with women"
-            className="illustration__women_desktop"
+            className="illustration__woman-desktop"
           />
           <img
             src={illustration_woman_mobile}
