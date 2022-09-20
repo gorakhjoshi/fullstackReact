@@ -15,7 +15,7 @@ function AccordionItem({
           className={`faq__question-button ${fontBold}`}
           aria-expanded={ariaExpanded}
           // data-qa="faq__question-button"
-          aria-control={`faq${index + 1}_desc`}
+          aria-controls={`faq${index + 1}_desc`}
         >
           {/* faq1_desc */}
           {/* faq2_desc */}
