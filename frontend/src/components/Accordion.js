@@ -2,6 +2,7 @@ import { useState } from "react";
 import AccordionItem from "./AccordionItem";
 import styles from "./Accordion.module.css";
 import { Loader } from "../styles/Loader";
+import MuiLoader from "../styles/MuiLoader";
 
 function Accordion({ questionAnswers }) {
   const [activeItem, setActiveItem] = useState(0);
@@ -29,7 +30,7 @@ function Accordion({ questionAnswers }) {
             );
           })
         ) : (
-          <Loader border={"red"} borderTop={"blue"} />
+          <MuiLoader />
         )}
       </dl>
     </div>
