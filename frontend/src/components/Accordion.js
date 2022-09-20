@@ -1,5 +1,6 @@
 import { useState } from "react";
 import AccordionItem from "./AccordionItem";
+import styles from "./Accordion.module.css";
 
 function Accordion({ questionAnswers }) {
   const [activeItem, setActiveItem] = useState(0);
@@ -27,7 +28,7 @@ function Accordion({ questionAnswers }) {
             );
           })
         ) : (
-          <div className="loader"></div>
+          <div className={styles.loader}></div>
         )}
       </dl>
     </div>
