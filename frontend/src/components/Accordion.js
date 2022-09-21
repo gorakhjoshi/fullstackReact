@@ -7,6 +7,12 @@ import MuiLoader from "../styles/MuiLoader";
 function Accordion({ questionAnswers }) {
   const [activeItem, setActiveItem] = useState(0);
 
+  async function sum() {
+    return 10;
+  }
+
+  // sum().then((res) => console.log(res));
+
   return (
     <div className="faq">
       <h1 className="faq__title">FAQ</h1>

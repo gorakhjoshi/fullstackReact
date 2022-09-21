@@ -3,14 +3,22 @@ import illustration_box from "../images/illustration-box-desktop.svg";
 import illustration_woman_desktop from "../images/illustration-woman-online-desktop.svg";
 import illustration_woman_mobile from "../images/illustration-woman-online-mobile.svg";
 import Accordion from "./Accordion";
+import { fetchData } from "../services/fetchData";
 
 const App = () => {
   const [questionAnswers, setQuestionAnswers] = useState();
 
   useEffect(() => {
-    fetch("http://localhost:8000/questionAnswer")
-      .then((res) => res.json())
-      .then((data) => setQuestionAnswers(data));
+    // fetchData().then((data) => setQuestionAnswers(data));
+
+    (async () => {
+      try {
+        const data = await fetchData();
+        setQuestionAnswers(data);
+      } catch (error) {
+        console.log(error);
+      }
+    })();
   }, []);
 
   return (
