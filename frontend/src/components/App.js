@@ -8,9 +8,9 @@ const App = () => {
   const [questionAnswers, setQuestionAnswers] = useState();
 
   useEffect(() => {
-    // fetch("http://localhost:8000/questionAnswer")
-    //   .then((res) => res.json())
-    //   .then((data) => setQuestionAnswers(data));
+    fetch("http://localhost:8000/questionAnswer")
+      .then((res) => res.json())
+      .then((data) => setQuestionAnswers(data));
   }, []);
 
   return (
